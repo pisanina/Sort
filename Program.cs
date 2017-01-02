@@ -6,10 +6,38 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class Program
+    class Program : SortUtils
     {
+
         static void Main(string[] args)
         {
-        }
+           int[] Array;
+           Array = new int[] { 19, 11, 15, 12, 17, 8, 6, 5, 2, 1, 99, 88, 77, 0, 44, 34, 71, 21, 26, 66 };
+
+           int lenght;
+
+           Console.WriteLine("Please write lenght of array");
+
+           lenght = Convert.ToInt32(Console.ReadLine());
+
+           Array = new int[lenght];
+
+           Random rnd = new Random();
+           for (int i = 0; i < lenght; i++)
+               Array[i] = rnd.Next(0, lenght); 
+           
+            Console.WriteLine("Start array");
+            PrintTable(Array);
+            
+            Console.WriteLine("How do you like that?");
+            PrintOutput (SelectSort.SelectSortMetod(Array));
+        
+            Console.ReadLine();
+         }
+        
     }
+           
 }
+
+    
+
