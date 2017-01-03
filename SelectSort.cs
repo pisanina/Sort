@@ -8,7 +8,7 @@ namespace Sort
 {
     class SelectSort : SortUtils
     {
-        static public int[] SelectSortMetod(int[] ArrayToSort)
+        static public int[] SelectSortRun(int[] ArrayToSort)
         {
             int Lenght = ArrayToSort.Length;
             int MinIndex;

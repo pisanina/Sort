@@ -8,7 +8,6 @@ namespace Sort
 {
    public  class SortUtils
     {
-
         public static void Swap(int[] array, int a, int b)
         {
             int temp = array[a];
@@ -23,25 +22,19 @@ namespace Sort
         }
 
        public static void PrintOutput (int[] ToPrint)
-        {
-            DateTime Timer = DateTime.Now;
-            SortUtils.PrintTable(ToPrint);
-            long ms = (long)(DateTime.Now - Timer).TotalMilliseconds;
-            Console.WriteLine("Time " + ms + " ms");
-        }
-
-       public static Array RandomArray (int[] Array)
        {
-         // int[] Array; 
-           int lenght;
-            Console.WriteLine("Please write lenght of array");
-            lenght = Convert.ToInt32(Console.ReadLine());
-           Array = new int[lenght];
+            DateTime Timer = DateTime.Now;
+            PrintTable(ToPrint);
+            long ms = (long)(DateTime.Now - Timer).TotalMilliseconds;
+            Console.WriteLine("Lenght of array: "+ ToPrint.Length + " Time of sort: " + ms + " ms");
+       }
+
+       public static int[] RandomArray (int[] Array, int lenght)
+       {
            Random rnd = new Random();
                   for (int i=0; i<lenght; i++)
                      Array[i] = rnd.Next(0, lenght); 
            return Array;
-
        }
     }
 }
