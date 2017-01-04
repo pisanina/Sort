@@ -52,14 +52,12 @@
     <Compile Include="QuickSort.cs" />
     <Compile Include="SelectSort.cs" />
     <Compile Include="SortUtils.cs" />
+    <Compile Include="Tests\Sort.Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

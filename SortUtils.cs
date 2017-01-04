@@ -14,6 +14,7 @@ namespace Sort
             array[a] = array[b];
             array[b] = temp;
         }
+
         public static void PrintTable(int[] ToPrint)
         {
             for (int i = 0; i < ToPrint.Length; i++)

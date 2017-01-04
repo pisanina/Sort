@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    public static class MergeSort
+    public  class MergeSort
     {
 
         public static int[] MergeSortRun( int[] ArrayToSort)
@@ -69,6 +69,12 @@ namespace Sort
         {
             result.Add(List.First());
             List.RemoveAt(0);
+        }
+
+        public MergeSort()
+        {
+            // TODO: Complete member initialization
+             int foo;
         }
     }
 }
