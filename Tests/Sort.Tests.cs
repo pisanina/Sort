@@ -21,7 +21,7 @@ namespace Sort.Tests
             public void Setup()
             {
 
-                MergeSort Metod = new MergeSort();
+                SelectSort Metod = new SelectSort();
                // int[] ArrayToSort = new int[] { 5, 4, 3, 2, 1 };
 
             }
@@ -29,7 +29,7 @@ namespace Sort.Tests
             public void EmptyInput()
             {
                 int[] ArrayToSort = new int[] { };
-                Assert.AreEqual(ArrayToSort, MergeSort.MergeSortRun(ArrayToSort));
+                Assert.AreEqual(ArrayToSort, SelectSort.SelectSortRun(ArrayToSort));
             }
 
             [Test]
@@ -46,7 +46,7 @@ namespace Sort.Tests
                 int[] ArrayToSort = new int[] { 5, 1, 3, 4, 2 };
                 int[] ArraySorted = new int[] { 1, 2, 3, 4, 5 };
 
-                Assert.AreEqual(ArraySorted, MergeSort.MergeSortRun(ArrayToSort));
+                Assert.AreEqual(ArraySorted, SelectSort.SelectSortRun(ArrayToSort));
                 
             }
         }

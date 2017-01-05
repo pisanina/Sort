@@ -26,5 +26,10 @@ namespace Sort
             }
             return ArrayToSort;
         }
+         public SelectSort()
+        {
+            // TODO: Complete member initialization
+            // int foo;
+        }
     }
 }

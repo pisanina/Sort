@@ -25,7 +25,7 @@ namespace Sort
             PrintTable(Array);
             
             Console.WriteLine("It works?");
-            PrintOutput(MergeSort.MergeSortRun(Array));
+            PrintOutput(QuickSort.QuickSortRun(Array));
         
             Console.ReadLine();
          }

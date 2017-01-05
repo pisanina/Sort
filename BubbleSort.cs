@@ -26,5 +26,11 @@ namespace Sort
             }
             return ArrayToSort;
         }
+
+         public BubbleSort()
+        {
+            // TODO: Complete member initialization
+            // int foo;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Sort
     {
         public static int[] QuickSortRun(int[] ArrayToSort)
         {
-            var SortedArray = QuickSortGo(ArrayToSort, 0, ArrayToSort.Length-1);
+            var SortedArray = QuickSortGo(ArrayToSort, 0, (ArrayToSort.Length-1));
             for (int i = 0; i < SortedArray.Length; i++)
                 ArrayToSort[i] = SortedArray[i];
             return ArrayToSort;
@@ -18,22 +18,21 @@ namespace Sort
 
         private static int[] QuickSortGo(int[] ArrayToSort, int left, int right)
         {
-           // int left, right;
             int i = left;
             int j = right;
-            int pivot = ArrayToSort.Length / 2;
+            int pivot = ArrayToSort[(left+right) / 2];
  
             while (i <= j)
             {
-                while (ArrayToSort[i].CompareTo(pivot) < 0 )
+                while (ArrayToSort[i] < pivot)
                      i++;
              
-                while (ArrayToSort[j].CompareTo(pivot) > 0)
+                while (ArrayToSort[j] >  pivot)
                      j--;
             
                 if (i <= j)
                 {
-                    Swap( ArrayToSort, i, j);
+                    Swap( ArrayToSort, i, j );
                     i++;
                     j--;
                 }
@@ -46,6 +45,10 @@ namespace Sort
                 QuickSortGo(ArrayToSort, i, right);
              
           return ArrayToSort;
+        }
+         public QuickSort()
+        {
+            
         }
     }
 }

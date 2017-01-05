@@ -74,7 +74,7 @@ namespace Sort
         public MergeSort()
         {
             // TODO: Complete member initialization
-             int foo;
+            // int foo;
         }
     }
 }

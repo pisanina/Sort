@@ -22,5 +22,12 @@ namespace Sort
             }
                 return ArrayToSort;
         }
+         public InsertionSort()
+        {
+            // TODO: Complete member initialization
+            // int foo;
+        }
     }
+
+
 }
