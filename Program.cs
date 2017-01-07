@@ -13,19 +13,19 @@ namespace Sort
            int[] Array;
            //Array = new int[] { 19, 11, 15, 12, 17, 8, 6, 5, 2, 1, 99, 88, 77, 0, 44, 34, 71, 21, 26, 66 };
 
-           int lenght;
+           int length;
 
            Console.WriteLine("Please write lenght of array");
-           lenght = Convert.ToInt32(Console.ReadLine());
+           length = Convert.ToInt32(Console.ReadLine());
 
-           Array = new int[lenght];
-           RandomArray(Array, lenght);
+           Array = new int[length];
+           RandomArray(Array, length);
 
             Console.WriteLine("Start array");
             PrintTable(Array);
             
             Console.WriteLine("It works?");
-            PrintOutput(QuickSort.QuickSortRun(Array));
+            PrintOutput(HeapSort.HeapSortRun(Array));
         
             Console.ReadLine();
          }
