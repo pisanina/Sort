@@ -11,7 +11,7 @@ namespace Sort
         public static int[] HeapSortRun (int[] ArrayToSort)
         {
             CreateHeap(ArrayToSort);
-           // MaxHeap(ArrayToSort, ArrayToSort.Length, 0);
+         //   MaxHeap(ArrayToSort, ArrayToSort.Length, 0);
 
             return ArrayToSort;
         }
@@ -22,11 +22,12 @@ namespace Sort
             for (int i = (HeapSize -1) /2; i >= 0; i--)
                 MaxHeap(Array, HeapSize, i);
 
-            for (int j = Array.Length -1; j>0; j-- )
+            for (int j = Array.Length - 1; j > 0; j--)
+            {
                 Swap(Array, j, 0);
                 HeapSize--;
-
-            MaxHeap( Array, HeapSize, 0);
+                MaxHeap(Array, HeapSize, 0);
+            }
          }
 
         private static void MaxHeap( int[] Array, int HeapSize, int Index)
