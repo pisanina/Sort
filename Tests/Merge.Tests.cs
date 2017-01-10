@@ -12,7 +12,7 @@ namespace Sort.Tests
         [SetUp]
         public void Setup()
         {
-            MergeSort metod = new MergeSort();
+             metod = new MergeSort();
         }
     }
 }

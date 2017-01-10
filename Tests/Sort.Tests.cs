@@ -8,26 +8,13 @@ using System.Threading.Tasks;
 namespace Sort.Tests 
 {
 
-   abstract public class SortTests
+   abstract public class SortTests 
     {
 
-        //[TestFixture]
-        //public class SortMetodsTest
-        //{
+       [TestFixture]
 
-        //    //MergeSort Metod;
-
-       [SetUp]
-       public void Setup()
-       {
-
-           SelectSort metod = new SelectSort();
-           //metod = new SelectSort();
-       }
-               // int[] ArrayToSort = new int[] { 5, 4, 3, 2, 1 };
-         //   ISortAlgorithm Algo1 = new SelectSort();
+       ISortAlgorithm metod;
              
-           // [TestCase(new Algo1())]
             [Test]
             public void EmptyInput()
             {
@@ -39,7 +26,7 @@ namespace Sort.Tests
             public void OneElement()
             {
                 int[] ArrayToSort = new int[] { 1 };
-                Assert.AreEqual(ArrayToSort, SelectSort.SortRun(ArrayToSort));
+                Assert.AreEqual(ArrayToSort, metod.SortRun(ArrayToSort));
             }
 
             [Test]
@@ -56,7 +43,7 @@ namespace Sort.Tests
                 int[] ArrayToSort = new int[] { 5, 1, 3, 4, 2 };
                 int[] ArraySorted = new int[] { 1, 2, 3, 4, 5 };
 
-                Assert.AreEqual(ArraySorted, SelectSort.SortRun(ArrayToSort));
+                Assert.AreEqual(ArraySorted, metod.SortRun(ArrayToSort));
                 
             }
         }
