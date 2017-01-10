@@ -20,9 +20,9 @@ namespace Sort
         {
             int i = left;
             int j = right;
-            int pivot = 0;
+            IComparable pivot =0;
             if (ArrayToSort.Length > 0)
-            pivot.CompareTo(ArrayToSort[(left+right) / 2]);
+            pivot = ArrayToSort[(left + right) / 2];
            
  
             while (i <= j)
@@ -30,7 +30,7 @@ namespace Sort
                 while (ArrayToSort[i].CompareTo(pivot) < 0)
                      i++;
              
-                while (ArrayToSort[i].CompareTo(pivot) > 0)
+                while (ArrayToSort[j].CompareTo(pivot) > 0)
                      j--;
             
                 if (i <= j)

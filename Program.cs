@@ -14,7 +14,7 @@ namespace Sort
            //Array = new int[] { 19, 11, 15, 12, 17, 8, 6, 5, 2, 1, 99, 88, 77, 0, 44, 34, 71, 21, 26, 66 };
 
            int length;
-            HeapSort Heap = new HeapSort();
+            QuickSort Heap = new QuickSort();
 
            Console.WriteLine("Please write lenght of array");
            length = Convert.ToInt32(Console.ReadLine());
