@@ -9,7 +9,7 @@ namespace Sort
 
     public class BubbleSort : SortUtils
     {
-         static public int[] BubbleSortRun(int[] ArrayToSort)
+          public static int[] SortRun(int[] ArrayToSort)
          {
             int Lenght = ArrayToSort.Length;
             int Iteration = 0;

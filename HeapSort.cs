@@ -8,7 +8,7 @@ namespace Sort
 {
     public class HeapSort : SortUtils
     {
-        public static int[] HeapSortRun (int[] ArrayToSort)
+        public static int[] SortRun (int[] ArrayToSort)
         {
             CreateHeap(ArrayToSort);
          //   MaxHeap(ArrayToSort, ArrayToSort.Length, 0);

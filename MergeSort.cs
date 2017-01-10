@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    public  class MergeSort
+    public class MergeSort 
     {
 
-        public static int[] MergeSortRun( int[] ArrayToSort)
+        public static int[] SortRun( int[] ArrayToSort)
         {
             var SortedArray = MergeSorting(ArrayToSort);
             for (int i = 0; i < SortedArray.Length; i++)

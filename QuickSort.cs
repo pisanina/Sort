@@ -8,7 +8,7 @@ namespace Sort
 {
     class QuickSort : SortUtils
     {
-        public static int[] QuickSortRun(int[] ArrayToSort)
+        public  static int[] SortRun(int[] ArrayToSort)
         {
             var SortedArray = QuickSortGo(ArrayToSort, 0, (ArrayToSort.Length-1));
             for (int i = 0; i < SortedArray.Length; i++)

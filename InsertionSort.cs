@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Sort
 {
     class InsertionSort : SortUtils
     { 
-        public static int[] InsertionSortRun(int[] ArrayToSort)
+        public static int[] SortRun(int[] ArrayToSort)
         {
             int CurrentElement;
             for (int Index = 1; Index < ArrayToSort.Length; Index++)

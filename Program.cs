@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class Program : SortUtils
+    class Program : ProgramUtils
     {
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace Sort
             PrintTable(Array);
             
             Console.WriteLine("It works?");
-            PrintOutput(HeapSort.HeapSortRun(Array));
+            PrintOutput(HeapSort.SortRun(Array));
         
             Console.ReadLine();
          }
