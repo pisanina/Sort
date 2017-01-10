@@ -7,6 +7,9 @@ using NUnit.Framework;
 
 namespace Sort.Tests
 {
+    [TestFixture]
+ 
+
     class Merge : SortTests
     {
         [SetUp]

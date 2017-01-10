@@ -7,12 +7,13 @@ using NUnit.Framework;
 
 namespace Sort.Tests
 {
+    [TestFixture]
     class Quick : SortTests
     {
         [SetUp]
         public void Setup()
         {
-            QuickSort metod = new QuickSort();
+             metod = new QuickSort();
         }
     }
 }

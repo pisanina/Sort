@@ -7,12 +7,13 @@ using NUnit.Framework;
 
 namespace Sort.Tests
 {
+    [TestFixture]
     class Select : SortTests
     {
         [SetUp]
         public void Setup()
         {
-            SelectSort metod = new SelectSort();
+             metod = new SelectSort();
         }
     }
 }

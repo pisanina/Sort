@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    interface ISortAlgorithm
+  public interface ISortAlgorithm
     {
-        int[] SortRun(int[] ArrayToSort);
+      IComparable[] SortRun(IComparable[] ArrayToSort);
     }
 }

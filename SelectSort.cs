@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class SelectSort : SortUtils
+    class SelectSort : SortUtils, ISortAlgorithm
     {
-         public static int[] SortRun(int[] ArrayToSort)
+        public IComparable[] SortRun(IComparable[] ArrayToSort)
         {
             int Lenght = ArrayToSort.Length;
             int MinIndex;
@@ -18,7 +18,7 @@ namespace Sort
                 MinIndex = i;
                 for (int j = i+1; j < Lenght; j++)
                 {
-                    if (ArrayToSort[j] < ArrayToSort[MinIndex])
+                    if (ArrayToSort[j].CompareTo(ArrayToSort[MinIndex])<0)
                         MinIndex = j;
                 }
                 if (MinIndex != i)

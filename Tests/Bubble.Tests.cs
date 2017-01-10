@@ -7,12 +7,13 @@ using NUnit.Framework;
 
 namespace Sort.Tests
 {
+    [TestFixture]
     class Bubble : SortTests
     {
         [SetUp]
         public void Setup()
         {
-          BubbleSort  metod = new BubbleSort();
+           metod = new BubbleSort();
         }
     }
 }

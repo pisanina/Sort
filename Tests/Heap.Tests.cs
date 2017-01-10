@@ -7,12 +7,13 @@ using NUnit.Framework;
 
 namespace Sort.Tests
 {
+    [TestFixture]
     class Heap : SortTests
     {
         [SetUp]
         public void Setup()
         {
-            HeapSort metod = new HeapSort();
+            metod = new HeapSort();
         }
     }
 }

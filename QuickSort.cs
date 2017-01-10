@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    class QuickSort : SortUtils
+    class QuickSort : SortUtils, ISortAlgorithm
     {
-        public  static int[] SortRun(int[] ArrayToSort)
+        public IComparable[] SortRun(IComparable[] ArrayToSort)
         {
             var SortedArray = QuickSortGo(ArrayToSort, 0, (ArrayToSort.Length-1));
             for (int i = 0; i < SortedArray.Length; i++)
@@ -16,18 +16,21 @@ namespace Sort
             return ArrayToSort;
         }
 
-        private static int[] QuickSortGo(int[] ArrayToSort, int left, int right)
+        private static IComparable[] QuickSortGo(IComparable[] ArrayToSort, int left, int right)
         {
             int i = left;
             int j = right;
-            int pivot = ArrayToSort[(left+right) / 2];
+            int pivot = 0;
+            if (ArrayToSort.Length > 0)
+            pivot.CompareTo(ArrayToSort[(left+right) / 2]);
+           
  
             while (i <= j)
             {
-                while (ArrayToSort[i] < pivot)
+                while (ArrayToSort[i].CompareTo(pivot) < 0)
                      i++;
              
-                while (ArrayToSort[j] >  pivot)
+                while (ArrayToSort[i].CompareTo(pivot) > 0)
                      j--;
             
                 if (i <= j)

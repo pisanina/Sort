@@ -6,70 +6,75 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-    public class MergeSort 
+    public class MergeSort : ISortAlgorithm
     {
 
-        public static int[] SortRun( int[] ArrayToSort)
+        public IComparable[] SortRun(IComparable[] ArrayToSort)
         {
-            var SortedArray = MergeSorting(ArrayToSort);
-            for (int i = 0; i < SortedArray.Length; i++)
-            {
-                ArrayToSort[i] = SortedArray[i];
-            }
+            //IComparable[] SortedArray = MergeSorting(ArrayToSort);
+            //for (int i = 0; i < SortedArray.Length; i++)
+            //{
+            //    ArrayToSort[i] = SortedArray[i];
+            //}
 
             return ArrayToSort;
         }
-        private static int[] MergeSorting(int[] ArrayToSort)
-        {
-            if (ArrayToSort.Length <= 1) return ArrayToSort;
-            
-            var Left = new List<int>();
-            var Right = new List<int>();
+        //private static IComparable[] MergeSorting(IComparable[] ArrayToSort)
+        //{
+        //    if (ArrayToSort.Length <= 1) return ArrayToSort;
 
-            Divide (ArrayToSort, Left, Right);
+        //    var Left = new List<IComparable>();
+        //    var Right = new List<IComparable>();
 
-            Left = MergeSorting(Left.ToArray()).ToList();
-            Right = MergeSorting(Right.ToArray()).ToList();
-            return Merge(Left, Right);
-        }
+        //    Divide (ArrayToSort, Left, Right);
 
-        private static int[] Merge(List<int> Left, List<int> Right)
-        {
-            var result = new List<int>();
+        //    Left = MergeSorting(Left.ToArray()).ToList();
+        //    Right = MergeSorting(Right.ToArray()).ToList();
+        //    return Merge(Left, Right);
+        //}
 
-            while (Left.Count > 0 && Right.Count > 0)
-            {
-                if (Left.First() <= Right.First())
-                    MoveValue (Left, result);
-                else
-                    MoveValue (Right, result);
-            }
+        //private static IComparable[] Merge(List<IComparable> Left, List<IComparable> Right)
+        //{
+        //    IComparable result = new List<IComparable>();
 
-            while (Left.Count > 0)
-                MoveValue (Left, result);
+        //    while (Left.Count > 0 && Right.Count > 0)
+        //    {
+        //        if (Left.First().CompareTo(Right.First())<=0)
+        //            MoveValue (Left, result);
+        //        else
+        //            MoveValue (Right, result);
+        //    }
 
-            while (Right.Count > 0)
-                MoveValue (Right, result);
+        //    while (Left.Count > 0)
+        //        MoveValue (Left, result);
 
-            return result.ToArray();
-        }
+        //    while (Right.Count > 0)
+        //        MoveValue (Right, result);
 
-        private static void Divide(int[] ArrayToSort, List<int> Left, List<int> Right)
-        {
-            for (int i = 0; i < ArrayToSort.Length; i++)
-            {
-                if (i % 2 > 0)
-                    Left.Add(ArrayToSort[i]);
-                else
-                    Right.Add(ArrayToSort[i]);
-            }
-        }
+        //    return result.ToArray();
+        //}
 
-        private static void MoveValue(List<int> List, List<int> result)
-        {
-            result.Add(List.First());
-            List.RemoveAt(0);
-        }
+        //private static void MoveValue(List<IComparable> Left, IComparable result)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private static void Divide(IComparable[] ArrayToSort, List<IComparable> Left, List<IComparable> Right)
+        //{
+        //    for (int i = 0; i < ArrayToSort.Length; i++)
+        //    {
+        //        if (i % 2 > 0)
+        //            Left.Add(ArrayToSort[i]);
+        //        else
+        //            Right.Add(ArrayToSort[i]);
+        //    }
+        //}
+
+        //private static void MoveValue(List<int> List, List<int> result)
+        //{
+        //    result.Add(List.First());
+        //    List.RemoveAt(0);
+        //}
 
         public MergeSort()
         {

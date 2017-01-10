@@ -8,14 +8,14 @@ namespace Sort
 {
    public class ProgramUtils
     {
-        public static void PrintTable(int[] ToPrint)
+        public static void PrintTable(IComparable[] ToPrint)
         {
             for (int i = 0; i < ToPrint.Length; i++)
                 Console.Write(ToPrint[i] + " ");
             Console.Write("\n");
         }
 
-        public static void PrintOutput(int[] ToPrint)
+        public static void PrintOutput(IComparable[] ToPrint)
         {
             DateTime Timer = DateTime.Now;
             PrintTable(ToPrint);
@@ -23,7 +23,7 @@ namespace Sort
             Console.WriteLine("Lenght of array: " + ToPrint.Length + " Time of sort: " + ms + " ms");
         }
 
-        public static int[] RandomArray(int[] Array, int lenght)
+        public static IComparable[] RandomArray(IComparable[] Array, int lenght)
         {
             Random rnd = new Random();
             for (int i = 0; i < lenght; i++)

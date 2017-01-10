@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sort
 {
-   public  class SortUtils
+    public class SortUtils 
     {
-        public static void Swap(int[] array, int a, int b)
+        public static void Swap(IComparable[] array, int a, int b)
         {
-            int temp = array[a];
+            IComparable temp = array[a];
             array[a] = array[b];
             array[b] = temp;
         }

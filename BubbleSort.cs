@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Sort
 {
 
-    public class BubbleSort : SortUtils
+    public class BubbleSort : SortUtils, ISortAlgorithm
     {
-          public static int[] SortRun(int[] ArrayToSort)
+        public IComparable[] SortRun(IComparable[] ArrayToSort)
          {
             int Lenght = ArrayToSort.Length;
             int Iteration = 0;
@@ -19,7 +19,7 @@ namespace Sort
             {
                 Swapped = false;
                 for (int j = 0; j < (Lenght - 1 - Iteration); j++)
-                    if (ArrayToSort[j] > ArrayToSort[j + 1])
+                    if (ArrayToSort[j].CompareTo(ArrayToSort[j + 1])>0)
                         Swap(ArrayToSort, j, j+1);
                 Swapped = true;
                 Iteration++;

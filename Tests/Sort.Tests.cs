@@ -11,21 +11,19 @@ namespace Sort.Tests
    abstract public class SortTests 
     {
 
-       [TestFixture]
-
-       ISortAlgorithm metod;
+            protected ISortAlgorithm metod;
              
             [Test]
             public void EmptyInput()
             {
-                int[] ArrayToSort = new int[] { };
+                IComparable[] ArrayToSort = new IComparable[] { };
                 Assert.AreEqual(ArrayToSort, metod.SortRun(ArrayToSort));
             }
 
             [Test]
             public void OneElement()
             {
-                int[] ArrayToSort = new int[] { 1 };
+                IComparable[] ArrayToSort = new IComparable[] { 1 };
                 Assert.AreEqual(ArrayToSort, metod.SortRun(ArrayToSort));
             }
 
@@ -40,8 +38,8 @@ namespace Sort.Tests
             [Test]
             public void AreSortingWorks()
             {
-                int[] ArrayToSort = new int[] { 5, 1, 3, 4, 2 };
-                int[] ArraySorted = new int[] { 1, 2, 3, 4, 5 };
+                IComparable[] ArrayToSort = new IComparable[] { 5, 1, 3, 4, 2 };
+                IComparable[] ArraySorted = new IComparable[] { 1, 2, 3, 4, 5 };
 
                 Assert.AreEqual(ArraySorted, metod.SortRun(ArrayToSort));
                 
