@@ -11,6 +11,19 @@ namespace Sort
     {
        protected ISortAlgorithm metod;
 
+       public static int CheckInputOfLength()
+       {
+           int length;
+           Console.WriteLine("Please write lenght of array");
+
+           while (!Int32.TryParse(Console.ReadLine(), out length))
+           {
+               Console.Beep();
+               Console.WriteLine("Please write the integer value");
+           }
+           return length;
+       }
+
         public static void PrintTable(IComparable[] ToPrint)
         {
             for (int i = 0; i < ToPrint.Length; i++)
@@ -32,6 +45,17 @@ namespace Sort
             SortApp = Process.GetCurrentProcess();
             memory = SortApp.PrivateMemorySize64 / 1000;
             return memory;
+        }
+
+
+        public static int ChooseSortAlgorithm(int length)
+        {
+            int WithAlgo;
+            Console.WriteLine("Choose Sort algorithm (1-6): \n" +
+                              "1.Bubble, 2.Insertion, 3.Heap, 4.Merge, 5.Quick, 6.Select");
+            WithAlgo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sorting array of length " + length);
+            return WithAlgo;
         }
 
         public static void Output(IComparable[] Array, int length, ISortAlgorithm metod)
