@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +12,25 @@ namespace Sort
         static void Main(string[] args)
         {
            IComparable[] Array;
-           //Array = new int[] { 19, 11, 15, 12, 17, 8, 6, 5, 2, 1, 99, 88, 77, 0, 44, 34, 71, 21, 26, 66 };
-
            int length;
-            QuickSort Heap = new QuickSort();
-
+           int  WithAlgo;
+           ISortAlgorithm metod;
+     
            Console.WriteLine("Please write lenght of array");
            length = Convert.ToInt32(Console.ReadLine());
-
            Array = new IComparable[length];
            RandomArray(Array, length);
-
-            Console.WriteLine("Start array");
-            PrintTable(Array);
             
-            Console.WriteLine("It works?");
-            PrintOutput(Heap.SortRun(Array));
-        
-            Console.ReadLine();
+           Console.WriteLine("Choose Sort algorithm (1-6): \n" +
+                             "1.Bubble, 2.Insertion, 3.Heap, 4.Merge, 5.Quick, 6.Select");
+           WithAlgo = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Sorting array of length "+ length);
+
+           metod = ChosenAlgorithm(WithAlgo);
+           Output(Array, Array.Length, metod);
+           Console.ReadLine();
          }
-    }
+     }
 }
 
     

@@ -8,7 +8,6 @@ namespace Sort
 {
     public class MergeSort : ISortAlgorithm
     {
-
         public IComparable[] SortRun(IComparable[] ArrayToSort)
         {
             IComparable[] SortedArray = MergeSorting(ArrayToSort);
@@ -17,8 +16,9 @@ namespace Sort
                 ArrayToSort[i] = SortedArray[i];
             }
 
-            return ArrayToSort;
+          return ArrayToSort;
         }
+
         private static IComparable[] MergeSorting(IComparable[] ArrayToSort)
         {
             if (ArrayToSort.Length <= 1) return ArrayToSort;
@@ -54,13 +54,8 @@ namespace Sort
             return result.ToArray();
         }
 
-        //private static void MoveValue(List<IComparable> Left, List<IComparable> result)
-        //{
-        //    throw new NotImplementedException();
-
-        //}
-
-        private static void Divide(IComparable[] ArrayToSort, List<IComparable> Left, List<IComparable> Right)
+        private static void Divide(IComparable[] ArrayToSort, List<IComparable> Left, 
+                                   List<IComparable> Right)
         {
             for (int i = 0; i < ArrayToSort.Length; i++)
             {
@@ -79,8 +74,7 @@ namespace Sort
 
         public MergeSort()
         {
-            // TODO: Complete member initialization
-            // int foo;
+        
         }
     }
 }

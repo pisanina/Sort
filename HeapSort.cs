@@ -11,8 +11,7 @@ namespace Sort
         public IComparable[] SortRun(IComparable[] ArrayToSort)
         {
             CreateHeap(ArrayToSort);
-         //   MaxHeap(ArrayToSort, ArrayToSort.Length, 0);
-
+      
             return ArrayToSort;
         }
 

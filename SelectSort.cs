@@ -28,8 +28,7 @@ namespace Sort
         }
          public SelectSort()
         {
-            // TODO: Complete member initialization
-            // int foo;
+           
         }
     }
 }

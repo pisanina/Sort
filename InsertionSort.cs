@@ -15,7 +15,8 @@ namespace Sort
             for (int Index = 1; Index < ArrayToSort.Length; Index++)
             {
                 CurrentElement = Index;
-                while ((CurrentElement > 0) && (ArrayToSort[CurrentElement - 1].CompareTo(ArrayToSort[CurrentElement])>0))
+                while ((CurrentElement > 0) && 
+                        (ArrayToSort[CurrentElement - 1].CompareTo(ArrayToSort[CurrentElement])>0))
                 {
                     Swap(ArrayToSort, CurrentElement, CurrentElement - 1);
                     CurrentElement--;
@@ -25,8 +26,7 @@ namespace Sort
         }
          public InsertionSort()
         {
-            // TODO: Complete member initialization
-            // int foo;
+    
         }
     }
 

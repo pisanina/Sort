@@ -29,8 +29,7 @@ namespace Sort
 
          public BubbleSort()
         {
-            // TODO: Complete member initialization
-            // int foo;
+           
         }
     }
 }

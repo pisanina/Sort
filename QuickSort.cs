@@ -23,8 +23,7 @@ namespace Sort
             IComparable pivot =0;
             if (ArrayToSort.Length > 0)
             pivot = ArrayToSort[(left + right) / 2];
-           
- 
+   
             while (i <= j)
             {
                 while (ArrayToSort[i].CompareTo(pivot) < 0)
