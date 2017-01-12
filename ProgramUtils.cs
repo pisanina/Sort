@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Sort
 {
    public class ProgramUtils 
@@ -16,17 +17,18 @@ namespace Sort
            int length;
            Console.WriteLine("Please write lenght of array");
 
+
            while (!Int32.TryParse(Console.ReadLine(), out length))
            {
                Console.Beep();
-               Console.WriteLine("Please write the integer value");
+               Console.WriteLine("Please write the number value");
            }
-           return length;
+           return Math.Abs(length);
        }
 
         public static void PrintTable(IComparable[] ToPrint)
         {
-            for (int i = 0; i < ToPrint.Length; i++)
+            foreach (int i in ToPrint)
                 Console.Write(ToPrint[i] + " ");
             Console.Write("\n");
         }
@@ -53,9 +55,13 @@ namespace Sort
             int WithAlgo;
             Console.WriteLine("Choose Sort algorithm (1-6): \n" +
                               "1.Bubble, 2.Insertion, 3.Heap, 4.Merge, 5.Quick, 6.Select");
-            WithAlgo = Convert.ToInt32(Console.ReadLine());
+             while (!Int32.TryParse(Console.ReadLine(), out WithAlgo))
+             {
+                Console.Beep();
+                Console.WriteLine("Please write the number in range 1-6");
+             }
             Console.WriteLine("Sorting array of length " + length);
-            return WithAlgo;
+            return Math.Abs(WithAlgo);
         }
 
         public static void Output(IComparable[] Array, int length, ISortAlgorithm metod)
@@ -84,7 +90,7 @@ namespace Sort
                 case 5: algo = new QuickSort(); break;
                 case 6: algo = new SelectSort(); break;
                 default:
-                    Console.WriteLine("Invalid selection");
+                    Console.WriteLine("Invalid selection, Select Sort will be run");
                     algo = new SelectSort();  break;
             }
             return algo;
